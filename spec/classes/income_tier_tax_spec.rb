@@ -16,7 +16,7 @@ RSpec.describe IncomeTierTax do
     end
 
     with_them do
-      subject { described_class.new(minimum_income:, maximum_income:, tax_rate:).apply(income) }
+      subject { described_class.new(minimum_income:, maximum_income:, tax_rate:).apply(income:) }
 
       it { is_expected.to eq(expected_value) }
     end
